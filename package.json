@@ -2,7 +2,15 @@
   "name": "renpy-live-viewer",
   "displayName": "Ren'Py Live Viewer",
   "description": "Ren'Py Live Viewer",
-  "version": "0.0.1",
+  "version": "1.0",
+  "author": {
+    "name": "mttldev",
+    "url": "https://github.com/mttldev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mttldev/renpy-live-viewer"
+  },
   "engines": {
     "vscode": "^1.88.0"
   },
