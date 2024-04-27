@@ -3,6 +3,7 @@
   "displayName": "Ren'Py Live Viewer",
   "description": "Ren'Py Live Viewer",
   "version": "1.0.0",
+  "license": "LGPL-2.1-only",
   "author": {
     "name": "mttldev",
     "url": "https://github.com/mttldev"
