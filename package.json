@@ -1,0 +1,79 @@
+{
+  "name": "renpy-live-viewer",
+  "displayName": "Ren'Py Live Viewer",
+  "description": "Ren'Py Live Viewer",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onDidChangeTextEditorSelection"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "renpy-live-viewer.connect",
+        "title": "Connect to reed server",
+        "category": "Ren'Py Live Viewer"
+      },
+      {
+        "command": "renpy-live-viewer.disconnect",
+        "title": "Disconnect from reed server",
+        "category": "Ren'Py Live Viewer"
+      },
+      {
+        "command": "renpy-live-viewer.jump",
+        "title": "Jump to label",
+        "category": "Ren'Py Live Viewer"
+      },
+      {
+        "command": "renpy-live-viewer.reed-command",
+        "title": "Send reed command",
+        "category": "Ren'Py Live Viewer"
+      },
+      {
+        "command": "renpy-live-viewer.start-game",
+        "title": "Start game",
+        "category": "Ren'Py Live Viewer"
+      }
+    ],
+    "configuration": {
+      "title": "renpy-live-viewer",
+      "properties": {
+        "renpy-live-viewer.sdk-executable": {
+          "type": "string",
+          "description": "Path to Ren'Py SDK executable"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "package": "pnpm vsce package --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/ws": "^8.5.10",
+    "ws": "^8.16.0"
+  }
+}
